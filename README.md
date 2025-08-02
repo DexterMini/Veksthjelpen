@@ -1,6 +1,8 @@
-# 🏦 LånSammenligning - Norges Smarteste Lånplattform
+# 🏦 LånSammenligning - Del av Veksthjelpen Plattformen
 
 En AI-drevet plattform for sammenligning av lån, kredittkort og refinansiering i Norge. Bygget med Next.js, TypeScript og Tailwind CSS.
+
+> **Del av Veksthjelpen**: Dette prosjektet er en del av den større Veksthjelpen-plattformen for finansielle tjenester i Norge.
 
 ## 🚀 Funksjoner
 
@@ -8,13 +10,13 @@ En AI-drevet plattform for sammenligning av lån, kredittkort og refinansiering 
 - **Interaktiv Quiz**: 7-stegs spørreskjema for personlig lånematching
 - **Smart Anbefalingsmotor**: Regelbasert algoritme som matcher brukere med optimale lån
 - **Lånekalkulator**: Avansert kalkulator for månedlige avdrag og totalkostnader
+- **AI-Chatbot**: GPT-4 basert norsk finansrådgiver
 - **Responsive Design**: Optimalisert for desktop og mobil
 - **Affiliate Tracking**: Komplett system for provisjonssporing
 - **GDPR Compliance**: Personvernvennlig databehandling
 - **Analytics**: Detaljert sporing av brukeratferd og konverteringer
 
 ### 🔄 Kommende Funksjoner
-- **AI-Chatbot**: GPT-4 basert norsk finansrådgiver
 - **Machine Learning**: Prediktiv analyse og personalisering
 - **Bank-Integrasjoner**: Real-time renter og godkjenningsrater
 - **Mobil App**: Native iOS/Android applikasjoner
@@ -26,7 +28,11 @@ Frontend (Next.js 14 + TypeScript)
 ├── src/app/                 # App Router pages
 ├── src/lib/                 # Business logic
 │   ├── loanEngine.ts       # Anbefalingsmotor
-│   └── analytics.ts        # Tracking system
+│   ├── analytics.ts        # Tracking system
+│   └── aiChatbot.ts        # AI chatbot logic
+├── src/components/         # React components
+│   ├── ChatBot.tsx         # AI chatbot component
+│   └── ChatBotWrapper.tsx  # Chatbot wrapper
 ├── src/types/              # TypeScript definitions
 └── public/                 # Statiske filer
 ```
@@ -36,6 +42,7 @@ Frontend (Next.js 14 + TypeScript)
 - **Språk**: TypeScript
 - **Styling**: Tailwind CSS
 - **Ikoner**: Lucide React
+- **AI**: OpenAI GPT-4 integration
 - **Deployment**: Vercel (anbefalt)
 
 ## 🚀 Kom i Gang
@@ -47,7 +54,7 @@ Frontend (Next.js 14 + TypeScript)
 ### Installasjon
 ```bash
 # Klon repository
-git clone <repository-url>
+git clone https://github.com/DexterMini/Veksthjelpen.git
 cd lansammenligning
 
 # Installer avhengigheter
@@ -164,7 +171,11 @@ lansammenligning/
 │   │   └── layout.tsx            # Root layout
 │   ├── lib/
 │   │   ├── loanEngine.ts         # Anbefalingsmotor
-│   │   └── analytics.ts          # Tracking system
+│   │   ├── analytics.ts          # Tracking system
+│   │   └── aiChatbot.ts          # AI chatbot logic
+│   ├── components/
+│   │   ├── ChatBot.tsx           # AI chatbot component
+│   │   └── ChatBotWrapper.tsx    # Chatbot wrapper
 │   └── types/
 │       └── global.d.ts           # TypeScript definitions
 ├── public/                       # Statiske filer
@@ -187,6 +198,7 @@ vercel --prod
 ```env
 NEXT_PUBLIC_GA_ID=your-google-analytics-id
 NEXT_PUBLIC_AFFILIATE_TRACKING_ID=your-tracking-id
+OPENAI_API_KEY=your-openai-api-key
 ```
 
 ## 🤝 Bidrag
@@ -203,10 +215,10 @@ Dette prosjektet er lisensiert under MIT License - se [LICENSE](LICENSE) filen f
 
 ## 📞 Kontakt
 
-- **Prosjekt**: LånSammenligning
-- **Website**: [https://lansammenligning.no](https://lansammenligning.no)
-- **Email**: kontakt@lansammenligning.no
+- **Prosjekt**: LånSammenligning (del av Veksthjelpen)
+- **GitHub**: [https://github.com/DexterMini/Veksthjelpen](https://github.com/DexterMini/Veksthjelpen)
+- **Email**: kontakt@veksthjelpen.no
 
 ---
 
-**Bygget med ❤️ for det norske markedet**
+**Bygget med ❤️ for det norske markedet som del av Veksthjelpen-plattformen**
